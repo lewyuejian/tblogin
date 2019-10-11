@@ -1,0 +1,97 @@
+body{
+    background: url("/static/img/login.png");
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+h2{
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+
+
+}
+.form-login{
+    width: 320px;
+    height: 360px;
+    position: fixed;
+    right: 180px;
+    top: 160px;
+    background-color: #225c89;
+    border-radius:8px;
+    border:1px solid #6cb6ef;
+}
+
+
+#id_username{
+    width: 280px;
+    height: 45px;
+
+    border-radius: 10px; /*圆角矩形*/
+    text-indent: 45px; /*里面隐形的字体首行缩进*/
+    margin: 10px auto;
+    margin-left: 18px;
+    margin-top: 36px;
+    border-width: 0;
+
+}
+#id_password{
+
+    width: 280px;
+    height: 45px;
+    position: relative;
+    border-radius: 10px; /*圆角矩形*/
+    text-indent: 45px; /*里面隐形的字体首行缩进*/
+    margin: 10px auto;
+    top: -18px;
+    left: 18px;
+    border-width: 0;
+
+}
+
+/*.btn{*/
+    /*color: #2aabd2;*/
+    /*width: 280px;*/
+    /*position: relative;*/
+    /*text-indent: 10px; !*里面隐形的字体首行缩进*!*/
+    /*top: -18px;*/
+    /*left: 18px;*/
+/*}*/
+
+#login_btn{
+    background-color: #2aabd2;
+    color: #e3e3e3;
+    width: 280px;
+    height: 45px;
+    position: relative;
+    border-radius: 10px; /*圆角矩形*/
+    border-width: 0;
+    top: -18px;
+    left: 4px;
+}
+
+#regist a{
+    margin-top: -16px;
+    right: 203px;
+    position: fixed;
+    color: #e3e3e3;
+}
+
+#user-img::after{
+    background: url("/static/img/user.png");
+    content: "";
+    width: 13px;
+    height: 16px;
+    position: absolute;
+    left: 36px;
+    top: 112px;
+}
+
+#pass-img::after{
+    background: url("/static/img/lock.png");
+    content: "";
+    width: 14px;
+    height: 18px;
+    position: absolute;
+    left: 36px;
+    top: 172px;
+}

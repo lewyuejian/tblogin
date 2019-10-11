@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    <title>登录界面</title>
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    {% if message %}
+    {{ message }}
+    {% endif %}
+    <div class="form-login">
+    <h2>欢迎登录</h2>
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group ">
+
+                    {{ field.errors }}
+                    {{ field }}
+                    {% if field.help_text %}
+                        <p class="help">{{ field.help_text|safe }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <div class="btn">
+                <input type="submit" value="登录" id="login_btn">
+            </div>
+        </form>
+        <span id="user-img"></span>
+
+        <span id="pass-img"></span>
+        <h5 class="my-href pull-right" id="regist">
+            <a href="{% url 'users:register' %}" >注册</a>
+        </h5>
+    </div>
+
+{% endblock %}
+{% block material %}
+{% endblock %}

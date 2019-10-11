@@ -1,0 +1,61 @@
+/*模块导航菜单条*/
+#my-nav {
+    /*display: block!important;*/
+    /*height: auto!important;*/
+
+    /*padding-bott autoom: 0;*/
+    /*overflow: visible!important;*/
+    background-color: cyan;
+    min-height: 80px;
+
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.navbar-nav>li {
+    float: left;
+    width: 100px;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 15px 25px;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+}
+
+/*资料管理导航栏*/
+.nav_menu{
+    width: 160px;
+    height: 600px;
+}
+.sidebar-nav{
+    width: 160px;
+    height: 850px;
+    background-color: aliceblue;
+}
+.sidebar-menu{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 5%;
+}
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style: none; /*去掉在CSS排版中列表前面的点*/
+}
+
+.sidebar-menu>li>a{
+    margin-top: 0;
+    top: 10px;
+}
