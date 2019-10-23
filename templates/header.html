@@ -1,29 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MyBlog</title>
-</head>
-<body>
-<h3>网站名：{{ sitename }}</h3>
-<h3>域名：{{ url }}</h3>
-{#新下面的代码#}
-<div>
-    <ul>
-    <h4>Blog教程目录：</h4>
-        {% for list in list  %}
-        <li>{{ list }}</li>
-        {% endfor %}
-    </ul>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+<div class="container my-con">
+
+<!--导航栏扩展-->
+{% block content %}
+    </div>
+
+<div class="medle-nav">
+    <div class="navbar-header">
+        <div class="navbar-menu">
+               <div class="collapse navbar-collapse" id="my-nav" >
+                   <ul class="nav navbar-nav">
+                       <li class="nav-menu1"><a href="{% url 'users:account'%}"></a></li>
+                   </ul>
+                   <ul class="nav navbar-nav">
+                       <li class="nav-menu2"><a href="{% url 'users:index'%}"></a></li>
+                   </ul>
+                   <ul class="nav navbar-nav">
+                       <li class="nav-menu3"><a href="{% url 'users:account'%}"></a></li>
+                   </ul>
+                   <ul class="nav navbar-nav">
+                       <li class="nav-menu4"><a href="{% url 'users:account'%}"></a></li>
+                   </ul>
+                   <ul class="nav navbar-nav">
+                       <li class="nav-menu5"><a href="{% url 'users:bsjtool'%}"></a></li>
+                   </ul>
+                   <ul class="nav navbar-nav">
+                       <li class="nav-menu6"><a href="{% url 'users:tbl_setting'%}"></a></li>
+                   </ul>
+                   <ul class="nav navbar-nav navbar-right">
+{#                  {% if request.session.is_login %}#}
+{#                      <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>#}
+{#                      <li><a href="{% url 'users:logout' %}">登出</a></li>#}
+{#                  {% else %}#}
+{#                    <li><a href="{% url 'users:register' %}">注册</a></li>#}
+{#                    <li><a href="{% url 'users:logout' %}">退出</a></li>#}
+{#                  {% endif %}#}
+{#              </ul>#}
+               </div>
+            <div class="line"></div>
+            <div class="info-user"></div>
+        </div>
+    </div>
 </div>
-<!-- 新加如下代码 -->
-<div>
-    <ul>
-    <h4>Blog教程作者信息：</h4>
-        {% for key,values in mydict.items  %}
-        <li>{{ key }}：{{ values }}</li>
-        {% endfor %}
-    </ul>
-</div>
-</body>
-</html>
+
+{% endblock %}

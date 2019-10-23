@@ -1,0 +1,145 @@
+.medle-nav{
+    background-color: #DEDCEA;
+    width: 1920px;
+    height: 935px;
+    position:fixed;
+}
+
+.navbar-header{
+    width:1680px;
+    height:80%;
+    top: 106px;
+    left: 117px;
+    position: relative;
+    background-color: #FBFBFC;
+    border-radius:40px;
+}
+.navbar-menu{
+    width: 130px;
+    height: 380px;
+    position: relative;
+    top: 60px;
+}
+.info-user{
+    background-color: #F6E6F2;
+    border-radius:40px;
+    height:749px;
+    width:364px;
+    margin-left: 1316px;
+    margin-top: -621px;
+
+    display:inline-block;
+
+}
+#my-nav {
+    min-height: 80px;
+    margin-top: 140px;
+}
+.navbar-nav{
+    width: 60px;
+    height: 60px;
+}
+/*一级导航分隔线*/
+.line{
+    width: 50px;
+    height: 81%;
+    position: absolute;
+    top: 11px;
+    left: 75px;
+    border-right: solid #ACC0D8 1px;
+}
+
+
+.nav-menu1>a{
+    background-image: url("/static/img/menu/addto.png");
+    width: 30px;
+    height: 30px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+}
+.nav-menu1>a:hover{
+    background-image: url("/static/img/menu/addto1.png");
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+.nav-menu2>a{
+    background-image: url("/static/img/menu/home.png");
+    width: 30px;
+    height: 30px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+}
+.nav-menu2>a:hover {
+    background-image: url("/static/img/menu/home1.png");
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+.nav-menu3>a{
+    background-image: url("/static/img/menu/infopersonal.png");
+    width: 30px;
+    height: 30px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+}
+.nav-menu3>a:hover {
+    background-image: url("/static/img/menu/infopersonal1.png");
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+.nav-menu4>a{
+    background-image: url("/static/img/menu/icon-test_1.png");
+    width: 30px;
+    height: 30px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+}
+.nav-menu4>a:hover {
+    background-image: url("/static/img/menu/icon-test.png");
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+.nav-menu5>a{
+    background-image: url("/static/img/menu/tool.png");
+    width: 30px;
+    height: 30px;
+    margin-left: 36px;
+    margin-bottom: 30px;
+}
+.nav-menu5>a:hover {
+    background-image: url("/static/img/menu/tool1.png");
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+.nav-menu6>a{
+    background-image: url("/static/img/menu/settings.png");
+    width: 30px;
+    height: 30px;
+    margin-left: 36px;
+    line-height: 45px;
+}
+.nav-menu6>a:hover {
+    background-image: url("/static/img/menu/settings1.png");
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+
+

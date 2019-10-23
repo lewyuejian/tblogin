@@ -1,0 +1,23 @@
+.nav-detail{
+    margin-left: 165px;
+    margin-top: -596px;
+    height: 167px;
+    width: 1080px;
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 25px;
+}
+.panel-heading {
+
+    background-color: aquamarine;
+    height: 100px;
+    width: 1050px;
+    border-radius: 20px;
+    margin-left: 16px;
+    margin-top: 17px;
+    position: absolute;
+}
+.panel-heading >ul>li{
+    margin-left: -40px;
+    margin-top: 8px;
+}

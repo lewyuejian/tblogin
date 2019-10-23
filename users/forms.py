@@ -103,3 +103,9 @@ class PwdChangeFrom(forms.Form):
             raise forms.ValidationError("密码不符合。 请再次输入。")
 
         return password2
+
+class DataCheck(forms.Form):
+    bsj_data = forms.CharField(label='bsjdata',max_length=200)
+    bb_data = forms.CharField(label='tbdata',max_length=200)
+    v3_data = forms.CharField(label='v3data',max_length=200)
+

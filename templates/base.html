@@ -29,47 +29,11 @@
 {% endblock %}
   </head>
   <body>
-
-
-
-  <div class="container my-con">
-<!--导航栏扩展-->
 {% block content %}
-
-  </div>
-  <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-nav" aria-expanded="false">
-            <span class="sr-only">切换导航条</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">pophas喊话器</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-         <div class="collapse navbar-collapse" id="my-nav">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="{% url 'users:index'%}">首页</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="{% url 'users:bsjtool'%}">工具</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="{% url 'users:account'%}">资料</a></li>
-            </ul>
-          <ul class="nav navbar-nav navbar-right">
-              {% if request.session.is_login %}
-                  <li><a href="#">当前在线：{{ request.session.user_name }}</a></li>
-                  <li><a href="{% url 'users:logout' %}">登出</a></li>
-              {% else %}
-                <li><a href="{% url 'users:register' %}">注册</a></li>
-                <li><a href="{% url 'users:logout' %}">退出</a></li>
-              {% endif %}
-          </ul>
-        </div>
+    {% include "header.html" %}
 {% endblock %}
-<!--资料管理导航扩展-->
+
+<!--侧边栏导航扩展-->
 {% block material %}
     <div id="sidebar" class="nav_menu">
 
@@ -79,21 +43,52 @@
         </div>
 -->
         <div class="sidebar-nav" id="my-accor">
-        <ul class="sidebar-menu">
-            <li><a href="{% url 'users:account' %}">用户管理</a></li>
-        </ul>
-        <ul class="sidebar-menu">
-            <li><a href="{% url 'users:account' %}">数据管理</a></li>
-        </ul>
+            <ul class="sidebar-menu">
+                <li><a href="{% url 'users:account' %}">用户管理</a></li>
+            </ul>
+            <ul class="sidebar-menu">
+                <li><a href="{% url 'users:data' %}">数据管理</a></li>
+            </ul>
         </div>
     </div>
+
 {% endblock %}
+
+<!--侧边栏导航-->
+{% block sidebar-tool %}
+
+    <div class="sidebar-nav sub-navbar node-header">
+        <div id="main" class="main"></div>
+        <link rel="stylesheet" href="/static/css/tbl_setting.css" >
+        <script src="/static/js/tbl_setting.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded",function(){
+          const select1 = new $Selector({
+            eleSelector:"#main",
+            options:[
+              {name:"校验数据",value:"0"},
+              {name:"模拟数据",value:"1"},
+              {name:"组合数据",value:"2"}
+            ],
+            defaultText:"校验数据"
+          });
+        })
+        </script>
+    </div>
+{% endblock %}
+
 {% block detail %}
 
 {% endblock %}
+
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="/static/jquery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="/static/bsjtool.js"></script>
+    <script src="/static/js/login.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-  </body>
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
+</body>
 </html>

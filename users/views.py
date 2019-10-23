@@ -108,8 +108,8 @@ def pwd_change(request,pk):
 def index(request):
     return render(request,'index.html')
 
-def bsjtool(request):
-    return render(request, 'means/bsjtool.html')
+def tbl_setting(request):
+    return render(request, 'users/tbl_setting.html')
 
 
 #退出

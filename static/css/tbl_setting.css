@@ -1,13 +1,11 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+/** {*/
+  /*padding: 0;*/
+  /*margin: 0;*/
+  /*box-sizing: border-box;*/
+/*}*/
 
 .main {
-    padding: 40px;
-    margin-left: 1200px;
-    margin-top: 132px;
+  padding: 40px;
 }
 
 .my-select {
@@ -20,6 +18,8 @@
   font-size: 14px;
   line-height: normal;
   position: relative;
+  margin-top: -80px;
+  margin-left: -38px;
 }
 
 .select-selection {
@@ -71,7 +71,6 @@
   font-variant: normal;
   text-transform: none;
   text-rendering: auto;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;

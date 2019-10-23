@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="{% static 'css/account.css' %}">
 {% endblock %}
 
+{% block sidebar-tool %}
+{% endblock %}
+
 {% block detail %}
-    <h2>灰度</h2>
+    <div class="nav-detail">
+        <div class="panel-heading" id="panel-user">
+            <span>账户信息：</span>
+            <ul>
+                <li>登录账号: {{ user.username }} </li>
+                <li>邮箱地址: {{ user.email }} </li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}
