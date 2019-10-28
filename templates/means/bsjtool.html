@@ -7,38 +7,40 @@
     <link rel="stylesheet" href="{% static 'css/bsjtool.css' %}">
 {% endblock %}
 {% block material %}
-    <h2>12345</h2>
+
 {% endblock %}
 {% block detail %}
-    <div class="toolpage">
-        <div class="pact-type">
-            <form action="{% url 'users:check' %}" method="POST">
-                <ul class="bsj-pact">
-                    <li><a href="#"> 29协议</a></li>
-                    <li><a href="#">部标协议</a></li>
-                    <li><a href="#">V3协议</a></li>
-                </ul>
-                <ul class="pact-content">
-                    <li class="action"  id="sub-pact1">
-                        <br>
-                        <textarea class="bsj_text" name="bsjpact" ></textarea>
-                        <br>
-                        <textarea class="check_data" >{{ rlt }}</textarea>
-                        <input type="submit" class="sub_check" value="校验29数据">
-                    </li>
-                    <li id="sub-pact2">
-                        <span id="inpact">请输入数据:</span>
-                        <input id="text-pact" value="">
-                        <input type="submit" value="校验部标数据">
-                    </li>
-                    <li id="sub-pact3">
-                        <span id="inpact">请输入数据:</span>
-                        <input id="text-pact" value="">
-                        <input type="submit" value="校验V3数据">
-                    </li>
-                </ul>
-             </form>
-        </div>
+<div class="toolpage">
+    <div class="pact-type">
     </div>
+    <form action="{% url 'users:bsjtool' %}" method="POST">
+
+        <ul class="bsj-pact">
+            <li><a href="#"> 29协议</a></li>
+            <li><a href="#">部标协议</a></li>
+            <li><a href="#">V3协议</a></li>
+        </ul>
+        <ul class="pact-content">
+            <li class="action"  id="sub-pact1">
+                <textarea class="bsj_text" name="bsjpact" ></textarea>
+                <textarea class="check_data" >{{ rlt }}</textarea>
+                <input type="submit" class="sub_check" value="校验29数据">
+            </li>
+            <li id="sub-pact2">
+                <textarea class="gb_text" id="text-pact" name="gbpact"></textarea>
+                <textarea class="check_data">{{ rlt }}</textarea>
+                <input type="submit" class="sub_check" value="校验部标数据">
+            </li>
+            <li id="sub-pact3">
+                <textarea class="v3_text" id="text-pact" name="v3pact"></textarea>
+                <textarea class="check_data">{{ rlt }}</textarea>
+                <input type="submit" class="sub_check" value="校验V3数据">
+            </li>
+        </ul>
+
+
+     </form>
+
+</div>
 {% endblock %}
 
