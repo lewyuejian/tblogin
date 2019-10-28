@@ -1,6 +1,6 @@
 from django.urls import re_path,path
 
-from . import views,viewsmaterial,viewstools
+from . import views,viewsmaterial,viewstools,viewsreport
 
 app_name = 'users'
 urlpatterns = [
@@ -15,7 +15,8 @@ urlpatterns = [
     re_path(r'account/',viewsmaterial.account,name="account"),
     re_path(r'data/',viewsmaterial.data,name="data"),
     re_path(r'tool/',viewstools.bsjtool,name="bsjtool"),
-    re_path(r'datacheck/',viewstools.check_bsj_data,name="check"),
+    # re_path(r'datacheck/',viewstools.check_bsj_data,name="check"),
     re_path(r'tbl_setting/',views.tbl_setting,name="tbl_setting"),
+    re_path(r'report/',viewsreport.report,name="report"),
 
 ]
