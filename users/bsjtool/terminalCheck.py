@@ -20,7 +20,7 @@ class ProtocolCheck(object):
 
     def check_gb(self, data):
         """
-            校验部标协议：
+            校验部标协议数据：
         :param data:
         :return:
         """
@@ -46,7 +46,7 @@ class ProtocolCheck(object):
 
     def check_bsj(self, data):
         """
-            校验BSJ-29协议：
+            校验BSJ-29协议数据：
         :param data:
         :return:
         """
@@ -73,7 +73,7 @@ class ProtocolCheck(object):
     @staticmethod
     def check_v3(line):
         """
-            校验V3协议:
+            校验V3协议数据:
         :param line:
         :return:
         """
